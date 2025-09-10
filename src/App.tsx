@@ -93,7 +93,7 @@ function App() {
       <Section 
         title="Event Gallery" 
         subtitle="Explore our exciting event posters and promotional materials"
-        backgroundColor="bg-gradient-to-r from-gray-900 to-black"
+        backgroundColor="bg-black bg-opacity-60"
       >
         <PamphletSlider />
       </Section>
@@ -102,7 +102,7 @@ function App() {
       <Section 
         title="Chief Guests" 
         subtitle="Distinguished personalities who will grace our event"
-        backgroundColor="bg-gradient-to-r from-red-800 to-red-900"
+        backgroundColor="bg-black bg-opacity-50"
       >
         <div className="bg-black bg-opacity-30 rounded-2xl p-8 text-center">
           <Users className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
@@ -115,7 +115,7 @@ function App() {
       <Section 
         title="Technical Events" 
         subtitle="Challenge your technical skills with our exciting competitions"
-        backgroundColor="bg-gradient-to-r from-black to-gray-900"
+        backgroundColor="bg-black bg-opacity-60"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {technicalEvents.map((event, index) => (
@@ -134,7 +134,7 @@ function App() {
       <Section 
         title="Non-Technical Events" 
         subtitle="Showcase your creativity and teamwork in these fun competitions"
-        backgroundColor="bg-gradient-to-r from-red-900 to-red-800"
+        backgroundColor="bg-black bg-opacity-50"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {nonTechnicalEvents.map((event, index) => (
@@ -152,7 +152,7 @@ function App() {
       {/* Mini Hackathon Section */}
       <Section 
         title="Mini Hackathon" 
-        backgroundColor="bg-gradient-to-r from-yellow-600 to-yellow-700"
+        backgroundColor="bg-yellow-600 bg-opacity-80"
       >
         <div className="bg-black bg-opacity-40 rounded-3xl p-12 text-center border-4 border-yellow-400">
           <Code className="w-20 h-20 text-yellow-400 mx-auto mb-6" />
@@ -180,7 +180,7 @@ function App() {
       <Section 
         title="Paper Presentation" 
         subtitle="Share your research and innovative ideas with the academic community"
-        backgroundColor="bg-gradient-to-r from-gray-900 to-black"
+        backgroundColor="bg-black bg-opacity-60"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
@@ -224,7 +224,7 @@ function App() {
       <Section 
         title="About Us" 
         subtitle="Learn more about Sri Sairam Institute of Technology and our mission"
-        backgroundColor="bg-gradient-to-r from-red-800 to-red-900"
+        backgroundColor="bg-black bg-opacity-50"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
@@ -258,7 +258,7 @@ function App() {
       <Section 
         title="Our Sponsors" 
         subtitle="Proud partners supporting our vision and mission"
-        backgroundColor="bg-gradient-to-r from-black to-gray-900"
+        backgroundColor="bg-black bg-opacity-60"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {[...Array(12)].map((_, index) => (
@@ -275,7 +275,7 @@ function App() {
       <Section 
         title="Student Coordinators" 
         subtitle="Meet the dedicated team organizing this spectacular event"
-        backgroundColor="bg-gradient-to-r from-red-900 to-red-800"
+        backgroundColor="bg-black bg-opacity-50"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {coordinators.map((coordinator, index) => (
@@ -292,7 +292,7 @@ function App() {
       <Section 
         title="Editors & Cinematographers" 
         subtitle="Creative minds capturing every moment of our event"
-        backgroundColor="bg-gradient-to-r from-gray-900 to-black"
+        backgroundColor="bg-black bg-opacity-60"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {editors.map((editor, index) => (
@@ -316,7 +316,7 @@ function App() {
       <Section 
         title="Design Team" 
         subtitle="Artistic visionaries behind our event's stunning visual identity"
-        backgroundColor="bg-gradient-to-r from-red-800 to-red-900"
+        backgroundColor="bg-black bg-opacity-50"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {designers.map((designer, index) => (
@@ -340,7 +340,7 @@ function App() {
       <Section 
         title="Web Master" 
         subtitle="The technical architect behind our digital presence"
-        backgroundColor="bg-gradient-to-r from-black to-gray-900"
+        backgroundColor="bg-black bg-opacity-60"
       >
         <div className="max-w-md mx-auto">
           <div className="bg-white rounded-2xl p-8 shadow-2xl text-center">
@@ -365,7 +365,7 @@ function App() {
       <Section 
         title="Venue & Contact" 
         subtitle="Find us and get in touch for any queries"
-        backgroundColor="bg-gradient-to-r from-red-900 to-black"
+        backgroundColor="bg-black bg-opacity-50"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Map */}

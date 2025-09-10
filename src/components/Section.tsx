@@ -13,7 +13,7 @@ const Section: React.FC<SectionProps> = ({
   subtitle, 
   children, 
   className = '', 
-  backgroundColor = 'bg-gradient-to-r from-red-900 to-red-800' 
+  backgroundColor = 'bg-black bg-opacity-50' 
 }) => {
   return (
     <section className={`py-16 ${backgroundColor} ${className}`}>

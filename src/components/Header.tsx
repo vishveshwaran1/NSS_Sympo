@@ -31,9 +31,9 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="relative min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 overflow-hidden">
+    <header className="relative min-h-screen bg-black bg-opacity-40 overflow-hidden">
       {/* Comic-style pattern overlay */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 border-4 border-yellow-400 rounded-full transform rotate-12"></div>
         <div className="absolute top-32 right-20 w-24 h-24 bg-yellow-400 rounded-full opacity-30 transform -rotate-45"></div>
         <div className="absolute bottom-40 left-1/4 w-16 h-16 border-4 border-white transform rotate-45"></div>
