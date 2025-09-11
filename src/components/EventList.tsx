@@ -6,28 +6,28 @@ const technicalEvents = [
     description:
       "A coding challenge on HackerRank in C, Java, and Python to test logic, speed, and creativity as participants explore vast problem-solving universes.",
     link: "https://forms.gle/2TjyiN4hdP26eH647",
-    img: "/1.png"
+    img: "/Events/Algo Galaxy.png"
   },
   {
     name: "Spidy Web Verse",
     description:
       "Teams build functional websites in 1 hour 30 minutes on any of the 17 SDGs using tools of their choice. AI tools like ChatGPT and GitHub Copilot can be used for creativity and speed. Ends with a 2–3 minute demo of the solution.",
     link: "https://forms.gle/muKUxgRA99gszX116",
-    img: "/2.png"
+    img: "/Events/Spidy Web Verse.png"
   },
   {
     name: "Guardians of the Code",
     description:
       "A fun, Marvel-themed workshop introducing beginners to JavaScript. Participants learn core concepts, DOM manipulation, and build a mini project—unlocking their own coding superpowers.",
     link: "https://forms.gle/62TVpJn5ybCMQFCg9",
-    img: "/3.png"
+    img: "/Events/Guardians of the Code.jpg"
   },
   {
     name: "Infinity Design",
     description:
       "A 2-hour UI/UX design competition in Figma where teams of two craft app/web prototypes based on a theme. Tests creativity, problem-solving, and design thinking.",
     link: "https://forms.gle/LsNnveJ4PqKpBjXE8",
-    img: "/4.png"
+    img: "public/Events/Infinity Designs.png"
   }
 ];
 
@@ -37,28 +37,28 @@ const nonTechnicalEvents = [
     description:
       "A fun lip-reading challenge where teams of two guess movies and phrases with music, humor, and speed—guaranteeing laughter and excitement.",
     link: "https://forms.gle/U9yxGMacgW6Kgseu7",
-    img: "/5.png"
+    img: "/Events/Sonic Dimesions.png"
   },
   {
     name: "Cine Spark",
     description:
       "Participants create 5–10 minute films on themes like conservation, equality, and empowerment. Shortlisted teams present ideas in a Q&A round to inspire audiences.",
     link: "https://forms.gle/gXt6g37LSYU3Hops7",
-    img: "/1.png"
+    img: "/Events/Cine Spark.png"
   },
   {
     name: "The Reel Multiverse",
     description:
       "A Marvel-themed event where participants act, guess, and dub iconic movie scenes across fun rounds, showcasing creativity and expressions.",
     link: "https://forms.gle/XC3xbTFz6VPcEbBU6",
-    img: "/2.png"
+    img: "/Events/Reel Multiverse.png"
   },
   {
     name: "The Debate Saga",
     description:
       "An engaging debate event where teams of three pop balloons to reveal topics. Two debate for and against, while one judges—promoting quick thinking, balanced perspectives, and teamwork.",
     link: "https://forms.gle/CrPEmermQAzkfvuV8",
-    img: "/3.png"
+    img: "/Events/Debate Saga.jpg"
   }
 ];
 
