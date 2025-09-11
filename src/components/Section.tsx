@@ -1,42 +1,29 @@
-import React from 'react';
+import React from "react";
 
 interface SectionProps {
-  title: string;
-  subtitle?: string;
+  title: React.ReactNode;
+  subtitle?: React.ReactNode;
   children: React.ReactNode;
   className?: string;
   backgroundColor?: string;
 }
 
-const Section: React.FC<SectionProps> = ({ 
-  title, 
-  subtitle, 
-  children, 
-  className = '', 
-  backgroundColor = 'bg-black bg-opacity-50' 
-}) => {
+export default function Section({
+  title,
+  subtitle,
+  children,
+  className = "",
+  backgroundColor = ""
+}: SectionProps) {
   return (
-    <section className={`py-16 ${backgroundColor} ${className}`}>
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4 uppercase tracking-wider"
-              style={{ 
-                fontFamily: 'Impact, Arial Black, sans-serif',
-                textShadow: '2px 2px 0px #000'
-              }}>
-            {title}
-          </h2>
-          {subtitle && (
-            <p className="text-yellow-300 text-xl font-semibold max-w-2xl mx-auto leading-relaxed">
-              {subtitle}
-            </p>
-          )}
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto mt-6 rounded-full"></div>
+    <section className={`py-12 px-4 ${backgroundColor} ${className} font-avengero text-white`}>
+      <div className="max-w-5xl mx-auto">
+        {title && <div className="mb-4 text-white text-6xl">{title}</div>}
+        {subtitle && <div className="mb-8 text-xl text-white">{subtitle}</div>}
+        <div className="text-white">
+          {children}
         </div>
-        {children}
       </div>
     </section>
   );
-};
-
-export default Section;
+}

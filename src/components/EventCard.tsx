@@ -34,8 +34,8 @@ const EventCard: React.FC<EventCardProps> = ({ title, description, imageUrl, cat
         </h3>
         <p className="text-gray-600 leading-relaxed">{description}</p>
         <div className="mt-4">
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold py-2 px-6 rounded-full hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 transition-all duration-200 shadow-lg">
-            Learn More
+          <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold py-2 px-6 rounded-full hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 transition-all duration-200 shadow-lg center">
+            Register Now
           </button>
         </div>
       </div>

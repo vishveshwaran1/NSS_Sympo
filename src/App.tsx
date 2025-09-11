@@ -1,9 +1,11 @@
-import React from 'react';
 import Header from './components/Header';
 import Section from './components/Section';
 import EventCard from './components/EventCard';
 import TeamCard from './components/TeamCard';
 import PamphletSlider from './components/PamphletSlider';
+import StudentCoordinatorSlider from './components/StudentCoordinatorSlider';
+import StaffCoordinatorSlider from "./components/StaffCoordinatorSlider";
+import EventList from "./components/EventList";
 import { 
   Users, 
   Trophy, 
@@ -91,17 +93,18 @@ function App() {
       
       {/* Pamphlet Showcase Section */}
       <Section 
-        title="Event Gallery" 
-        subtitle="Explore our exciting event posters and promotional materials"
-        backgroundColor="bg-black bg-opacity-60"
-      >
+  title={<span className="font-avengero text-6xl">Event Gallery</span>} 
+  subtitle={<span className="font-avengero text-3xl">Explore our exciting event</span>} 
+  backgroundColor="bg-black bg-opacity-60"
+>
+
         <PamphletSlider />
       </Section>
 
       {/* Chief Guests Section */}
       <Section 
-        title="Chief Guests" 
-        subtitle="Distinguished personalities who will grace our event"
+        title={<span className="font-avengero text-4xl">Chief Guests</span>} 
+        subtitle={<span className="font-avengero text-xl">Distinguished personalities who will grace our event</span>}
         backgroundColor="bg-black bg-opacity-50"
       >
         <div className="bg-black bg-opacity-30 rounded-2xl p-8 text-center">
@@ -111,52 +114,23 @@ function App() {
         </div>
       </Section>
 
-      {/* Technical Events Section */}
-      <Section 
-        title="Technical Events" 
-        subtitle="Challenge your technical skills with our exciting competitions"
-        backgroundColor="bg-black bg-opacity-60"
+      {/* Events Section (Technical & Non-Technical) */}
+      <Section
+        title={<span className="font-avengero text-4xl">Events</span>}
+        subtitle={<span className="font-avengero text-xl">Register for our technical and non-technical events!</span>}
+        backgroundColor="bg-black bg-opacity-80"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {technicalEvents.map((event, index) => (
-            <EventCard
-              key={index}
-              title={event.title}
-              description={event.description}
-              imageUrl={event.imageUrl}
-              category="Technical"
-            />
-          ))}
-        </div>
-      </Section>
-
-      {/* Non-Technical Events Section */}
-      <Section 
-        title="Non-Technical Events" 
-        subtitle="Showcase your creativity and teamwork in these fun competitions"
-        backgroundColor="bg-black bg-opacity-50"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {nonTechnicalEvents.map((event, index) => (
-            <EventCard
-              key={index}
-              title={event.title}
-              description={event.description}
-              imageUrl={event.imageUrl}
-              category="Non-Technical"
-            />
-          ))}
-        </div>
+        <EventList />
       </Section>
 
       {/* Mini Hackathon Section */}
       <Section 
-        title="Mini Hackathon" 
+        title={<span className="font-dback">Mini Hackathon</span>} 
         backgroundColor="bg-yellow-600 bg-opacity-80"
       >
         <div className="bg-black bg-opacity-40 rounded-3xl p-12 text-center border-4 border-yellow-400">
           <Code className="w-20 h-20 text-yellow-400 mx-auto mb-6" />
-          <h3 className="text-3xl font-black text-white mb-6">24-Hour Coding Marathon</h3>
+          <h3 className="font-avengero text-3xl font-bold mb-6">24-Hour Coding Marathon</h3>
           <p className="text-white text-lg leading-relaxed max-w-3xl mx-auto mb-8">
             Join our intensive 24-hour hackathon where teams of developers, designers, and innovators 
             come together to build amazing solutions. Code, create, and compete for exciting prizes 
@@ -176,6 +150,16 @@ function App() {
         </div>
       </Section>
 
+      {/* Deadpool Sticker - Mobile Responsive & Higher Position */}
+      <div className="relative">
+        <img
+          src="/Deadpool.png"
+          alt="Deadpool Sticker"
+          className="block absolute right-2 -top-8 z-50 pointer-events-none max-w-full h-auto w-24 md:w-40 lg:w-56"
+          style={{ transform: 'rotate(-8deg)' }}
+        />
+      </div>
+
       {/* Paper Presentation Section */}
       <Section 
         title="Paper Presentation" 
@@ -193,6 +177,7 @@ function App() {
                 <p>• Get feedback from industry experts</p>
                 <p>• Win exciting cash prizes and certificates</p>
               </div>
+              
             </div>
           </div>
           <div className="text-white">
@@ -202,6 +187,7 @@ function App() {
               papers across various domains including Computer Science, Engineering, and Technology. 
               Selected papers will be presented at our symposium and published in our conference proceedings.
             </p>
+            
             <div className="space-y-4">
               <div className="flex items-center">
                 <Trophy className="w-6 h-6 text-yellow-400 mr-3" />
@@ -235,21 +221,21 @@ function App() {
             </div>
           </div>
           <div className="text-white">
-            <h3 className="text-3xl font-bold mb-6">Our Institution</h3>
-            <p className="text-lg leading-relaxed mb-6">
-              Sri Sairam Institute of Technology stands as a beacon of excellence in technical education, 
-              fostering innovation and nurturing talented minds. Our National Service Scheme organizes 
-              SAMARPANA as a platform to showcase student talents and promote technical excellence.
-            </p>
-            <p className="text-lg leading-relaxed mb-8">
-              Through events like SAMARPANA, we aim to bridge the gap between academic learning and 
-              real-world applications, encouraging students to think creatively and work collaboratively.
-            </p>
-            <div className="flex justify-center">
-              <div className="bg-yellow-400 rounded-full p-6 shadow-2xl">
-                <Calendar className="w-12 h-12 text-black" />
-              </div>
-            </div>
+            <h3 className="text-3xl font-bold mb-6 font-avengero">Our Institution</h3>
+<p className="text-lg leading-relaxed mb-6 font-avengero">
+  Sri Sairam Institute of Technology stands as a beacon of excellence in technical education, 
+  fostering innovation and nurturing talented minds. Our National Service Scheme organizes 
+  SAMARPANA as a platform to showcase student talents and promote technical excellence.
+</p>
+<p className="text-lg leading-relaxed mb-8 font-avengero">
+  Through events like SAMARPANA, we aim to bridge the gap between academic learning and 
+  real-world applications, encouraging students to think creatively and work collaboratively.
+</p>
+<div className="flex justify-center">
+  <div className="bg-yellow-400 rounded-full p-6 shadow-2xl">
+    <Calendar className="w-12 h-12 text-black" />
+  </div>
+</div>
           </div>
         </div>
       </Section>
@@ -264,28 +250,29 @@ function App() {
           {[...Array(12)].map((_, index) => (
             <div key={index} className="bg-white rounded-2xl p-6 shadow-xl hover:scale-105 transition-transform duration-300">
               <div className="h-16 bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center">
-                <span className="text-gray-500 font-bold">SPONSOR</span>
+                <span className="text-gray-500 font-bold font-avengero">SPONSOR</span>
               </div>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* Student Coordinators Section */}
-      <Section 
-        title="Student Coordinators" 
-        subtitle="Meet the dedicated team organizing this spectacular event"
+      {/* Staff Coordinators Section */}
+      <Section
+        title="Staff Coordinators"
+        subtitle="Meet our dedicated staff coordinators"
         backgroundColor="bg-black bg-opacity-50"
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {coordinators.map((coordinator, index) => (
-            <TeamCard
-              key={index}
-              name={coordinator.name}
-              position={coordinator.position}
-            />
-          ))}
-        </div>
+        <StaffCoordinatorSlider />
+      </Section>
+
+      {/* Student Coordinators Section */}
+      <Section
+        title="Student Coordinators"
+        subtitle="Meet our dedicated student coordinators"
+        backgroundColor="bg-black bg-opacity-50"
+      >
+        <StudentCoordinatorSlider />
       </Section>
 
       {/* Editors & Cinematographers Section */}
@@ -352,9 +339,9 @@ function App() {
                 <Code className="w-4 h-4 text-black" />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-2">Alex Johnson</h3>
-            <p className="text-red-600 font-semibold uppercase tracking-wider mb-4">Lead Web Developer</p>
-            <p className="text-gray-600">
+            <h3 className="text-2xl font-bold text-gray-800 mb-2 font-avengero">Alex Johnson</h3>
+            <p className="text-red-600 font-semibold uppercase tracking-wider mb-4 font-avengero">Lead Web Developer</p>
+            <p className="text-gray-600 font-avengero">
               Architecting digital experiences and ensuring seamless web performance for SAMARPANA.
             </p>
           </div>

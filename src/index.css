@@ -4,7 +4,20 @@
 
 body {
   background-image: url('/red bg.jpg');
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-size: 400px 400px;
+  background-repeat: repeat-y; /* repeat only vertically */
+  background-size: 100% auto;  /* stretch full width, keep height auto */
+  background-attachment: scroll;
+}
+/* globals.css */
+@font-face {
+  font-family: 'Avengero';
+  src: url('/fonts/Avengero.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: '3D_Back';
+  src: url('/fonts/3D_Back.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
