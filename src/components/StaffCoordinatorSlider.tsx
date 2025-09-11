@@ -1,9 +1,9 @@
 import React from "react";
 
 const staffCoordinators = [
-  { name: "Dr. Murugayesu", img: "/fonts/MagicMem/Murugayesu.jpg" },
-  { name: "Ms. Srimathi", img: "/fonts/MagicMem/Srimathi.jpg" },
-  { name: "Mr. Sathish", img: "/fonts/MagicMem/Sathish.jpg" }
+  { name: "Dr. Roopa D ", img: "/Staff/roopa.jpg" , designation: "AP / CSE"},
+  { name: "Dr. Baranidharan K", img: "/Staff/Barani.jpg" , designation: "AP / NSS Programme Officer"},
+  { name: "Dr. Avudainayaki R", img: "/Staff/Avudainayaki.jpg" , designation: "AP / S&H"}
 ];
 
 export default function StaffCoordinatorSlider() {
@@ -14,9 +14,10 @@ export default function StaffCoordinatorSlider() {
           <img
             src={staff.img}
             alt={staff.name}
-            className="object-cover w-40 h-40 rounded-2xl border-4 border-red-600 mb-2"
+            className="object-cover w-60 h-60 rounded-2xl border-4 border-red-600 mb-2"
           />
           <div className="text-lg font-bold text-red-600 text-center">{staff.name}</div>
+          <div className="text-md text-gray-500 text-center">{staff.designation}</div>
         </div>
       ))}
     </div>

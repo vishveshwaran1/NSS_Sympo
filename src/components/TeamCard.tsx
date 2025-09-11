@@ -1,23 +1,25 @@
 import React from 'react';
 import { User } from 'lucide-react';
 
-interface TeamCardProps {
+export interface TeamCardProps {
   name: string;
   position: string;
-  imageUrl?: string;
   isCircular?: boolean;
+  className?: string;
+  alt?: string;
+  src?: string;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({ name, position, imageUrl, isCircular = true }) => {
+const TeamCard: React.FC<TeamCardProps> = ({ name, position, src, isCircular = true, alt }) => {
   return (
     <div className="text-center group">
       <div className={`relative mx-auto mb-4 overflow-hidden bg-white shadow-2xl transition-all duration-300 group-hover:scale-110 ${
         isCircular ? 'w-32 h-32 rounded-full' : 'w-40 h-48 rounded-2xl'
       }`}>
-        {imageUrl ? (
+        {src ? (
           <img 
-            src={imageUrl} 
-            alt={name}
+            src={src} 
+            alt={alt}
             className="w-full h-full object-cover"
           />
         ) : (

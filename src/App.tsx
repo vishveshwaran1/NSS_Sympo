@@ -68,23 +68,19 @@ function App() {
     }
   ];
 
-  const coordinators = [
-    { name: "Arjun Sharma", position: "Event Coordinator" },
-    { name: "Priya Nair", position: "Technical Lead" },
-    { name: "Rahul Singh", position: "Non-Tech Coordinator" },
-    { name: "Sneha Patel", position: "Logistics Head" },
-  ];
-
   const editors = [
-    { name: "Karthik Raj", position: "Video Editor" },
-    { name: "Deepika M", position: "Cinematographer" },
-    { name: "Arun Kumar", position: "Photo Editor" },
+    { name: "VAIBHAV ", position: "CSE II Year", src: "/Editors/Vaibhav.png" }, 
+    { name: "Datchin Y S", position: "CSE II Year", src: "/Editors/Datchin.png" },
+    { name: "SAI KANISHKAR S", position: "CSE II Year", src: "/Editors/Sai Kanishkar.png" },
+    { name: "RAHUL R M", position: "CSE II Year", src: "/Editors/Rahul.png" }
   ];
 
   const designers = [
-    { name: "Nisha Reddy", position: "UI Designer" },
-    { name: "Vikram S", position: "Graphic Designer" },
-    { name: "Ananya Joshi", position: "Creative Director" },
+    { name: "Ajisha", position: "CSE II Year" , src:"/Design/Ajisha.jpg" },
+    { name: "Shivani", position: "CSE II Year" , src:"/Design/Shivani.jpg" },
+    { name: "Shruthi", position: "CSE II Year" , src:"/Design/Shruthi.jpg" },
+    { name: "Shyam", position: "AI&DS II Year" , src:"/Design/Shyam.jpg" },
+    { name: "Varshini", position: "CSE II Year" , src:"/Design/Varshini.png" },
   ];
 
   return (
@@ -281,18 +277,18 @@ function App() {
         subtitle="Creative minds capturing every moment of our event"
         backgroundColor="bg-black bg-opacity-60"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {editors.map((editor, index) => (
             <div key={index} className="text-center">
               <div className="relative mx-auto mb-4">
                 <TeamCard
+                  src={editor.src}
+                  alt={editor.name}
+                  className="absolute inset-0 w-full h-full object-cover rounded-2xl"
                   name={editor.name}
                   position={editor.position}
                   isCircular={false}
                 />
-                <div className="absolute top-2 right-2 bg-red-600 rounded-full p-2">
-                  <Camera className="w-4 h-4 text-white" />
-                </div>
               </div>
             </div>
           ))}
@@ -305,18 +301,19 @@ function App() {
         subtitle="Artistic visionaries behind our event's stunning visual identity"
         backgroundColor="bg-black bg-opacity-50"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {designers.map((designer, index) => (
             <div key={index} className="text-center">
               <div className="relative mx-auto mb-4">
                 <TeamCard
+                src={designer.src}
+                  alt={designer.name}
+                  className="absolute inset-0 w-full h-full object-cover rounded-2xl"
                   name={designer.name}
                   position={designer.position}
                   isCircular={false}
                 />
-                <div className="absolute top-2 right-2 bg-yellow-500 rounded-full p-2">
-                  <Palette className="w-4 h-4 text-black" />
-                </div>
+               
               </div>
             </div>
           ))}
@@ -339,7 +336,7 @@ function App() {
                 <Code className="w-4 h-4 text-black" />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-2 font-avengero">Alex Johnson</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-2 font-avengero">Vishveshwaran A</h3>
             <p className="text-red-600 font-semibold uppercase tracking-wider mb-4 font-avengero">Lead Web Developer</p>
             <p className="text-gray-600 font-avengero">
               Architecting digital experiences and ensuring seamless web performance for SAMARPANA.
@@ -356,15 +353,20 @@ function App() {
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Map */}
-          <div className="bg-white rounded-2xl p-4 shadow-2xl">
-            <div className="bg-gradient-to-br from-gray-200 to-gray-400 h-80 rounded-xl flex items-center justify-center">
-              <MapPin className="w-20 h-20 text-gray-600" />
-              <div className="ml-4 text-gray-700">
-                <h4 className="font-bold text-xl">Google Maps</h4>
-                <p>Interactive venue location</p>
-              </div>
-            </div>
-          </div>
+  
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1750647706585!2d80.05065757512264!3d12.960647087353676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f51f638ddfbb%3A0xf3aef7ec7c8979ba!2sSri%20Sairam%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1757614259703!5m2!1sen!2sin"
+      width="400"
+      height="300"
+      style={{ border: 0, borderRadius: "0.75rem" }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Sri Sairam Institute of Technology Location"
+      className="w-full max-w-md"
+    />
+
+
 
           {/* Contact Info */}
           <div className="text-white">

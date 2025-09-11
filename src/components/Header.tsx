@@ -65,10 +65,12 @@ const Header = () => {
       <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex gap-8">
           <img src="/1.png" alt="Logo 1" className="w-20 h-20 object-contain" />
+          <img src="/0.png" alt="Logo 6" className="w-20 h-20 object-contain" />
           <img src="/2.png" alt="Logo 2" className="w-20 h-20 object-contain" />
           <img src="/3.png" alt="Logo 3" className="w-20 h-20 object-contain" />
           <img src="/4.png" alt="Logo 4" className="w-20 h-20 object-contain" />
-          <img src="/5.png" alt="Logo 5" className="w-20 h-20 object-contain" />
+          <img src="/6.jpg" alt="Logo 6" className="w-20 h-20 object-contain rounded-full " />
+          <img src="/5.png" alt="Logo 5" className="w-20 h-20 object-contain " />
         </div>
       </div>
 
