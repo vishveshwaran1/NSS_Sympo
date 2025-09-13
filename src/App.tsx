@@ -83,6 +83,9 @@ function App() {
     { name: "Shyam", position: "AI&DS II Year" , src:"/Design/Shyam.jpg" },
     { name: "Varshini", position: "CSE II Year" , src:"/Design/Varshini.png" },
   ];
+  const developer = [
+    {name:"Vishveshwaran A", position:"CSE III Year" , src:"/meeee.jpg"},
+  ];
 
   return (
     <div className="min-h-screen">
@@ -345,29 +348,28 @@ function App() {
       </Section>
 
       {/* Web Master Section */}
-      <Section 
-        title="Web Master" 
-        subtitle="The technical architect behind our digital presence"
-        backgroundColor="bg-black bg-opacity-60"
-      >
-        <div className="max-w-md mx-auto">
-          <div className="bg-white rounded-2xl p-8 shadow-2xl text-center">
-            <div className="relative inline-block mb-6">
-              <div className="w-32 h-32 bg-gradient-to-br from-red-600 to-red-800 rounded-full mx-auto flex items-center justify-center">
-                <Monitor className="w-12 h-12 text-white" />
-              </div>
-              <div className="absolute -bottom-2 -right-2 bg-yellow-500 rounded-full p-2">
-                <Code className="w-4 h-4 text-black" />
-              </div>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-2 font-avengero">Vishveshwaran A</h3>
-            <p className="text-red-600 font-semibold uppercase tracking-wider mb-4 font-avengero">Lead Web Developer</p>
-            <p className="text-gray-600 font-avengero">
-              Architecting digital experiences and ensuring seamless web performance for SAMARPANA.
-            </p>
-          </div>
-        </div>
-      </Section>
+  <Section 
+  title="Web Master" 
+  subtitle="The technical architect behind our digital presence"
+  backgroundColor="bg-black bg-opacity-60"
+>
+  <div className="max-w-md mx-auto text-center">
+    
+    {/* Centered & Zoomed Image */}
+    <div className="flex justify-center mb-6">
+      <div className="relative inline-block transform scale-110">
+        <TeamSlider members={developer} slidesToShow={1} />
+      </div>
+    </div>
+
+    {/* Text */}
+    <p className="text-gray-600 font-avengero">
+      Architecting digital experiences and ensuring seamless web performance for SAMARPANA.
+    </p>
+  </div>
+</Section>
+
+
 
       {/* Venue & Contact Section */}
       <Section 
@@ -402,7 +404,7 @@ function App() {
                 </div>
                 <div>
                   <h4 className="font-bold">Email</h4>
-                  <p className="text-yellow-300">samarpana2k25@gmail.com</p>
+                  <p className="text-yellow-300 font-serif">samarpana2k25@gmail.com</p>
                 </div>
               </div>
               
