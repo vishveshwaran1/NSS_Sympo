@@ -205,39 +205,73 @@ function App() {
   </div>
 </Section>
 
-      {/* About Us Section */}
-      <Section 
-        title="About Us" 
-        subtitle="Learn more about Sri Sairam Institute of Technology and our mission"
-        backgroundColor="bg-black bg-opacity-50"
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <div className="bg-white rounded-2xl p-2 shadow-2xl">
-              <div className="bg-gradient-to-br from-gray-200 to-gray-400 h-64 rounded-xl flex items-center justify-center">
-                <Calendar className="w-20 h-20 text-gray-600" />
-              </div>
-            </div>
-          </div>
-          <div className="text-white">
-            <h3 className="text-3xl font-bold mb-6 font-avengero">Our Institution</h3>
-<p className="text-lg leading-relaxed mb-6 font-avengero">
-  Sri Sairam Institute of Technology stands as a beacon of excellence in technical education, 
-  fostering innovation and nurturing talented minds. Our National Service Scheme organizes 
-  SAMARPANA as a platform to showcase student talents and promote technical excellence.
-</p>
-<p className="text-lg leading-relaxed mb-8 font-avengero">
-  Through events like SAMARPANA, we aim to bridge the gap between academic learning and 
-  real-world applications, encouraging students to think creatively and work collaboratively.
-</p>
-<div className="flex justify-center">
-  <div className="bg-yellow-400 rounded-full p-6 shadow-2xl">
-    <Calendar className="w-12 h-12 text-black" />
+      {/* About Us Section */}{/* About Us Section */}
+{/* About Us Section */}
+<Section 
+  title="About Us" 
+  subtitle="" 
+  backgroundColor="bg-black bg-opacity-50"
+>
+  <div className="flex flex-col gap-1">
+
+    {/* Row 1: Institution Image + Text */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      {/* Institution Image */}
+      <div className="flex justify-center">
+        <img 
+          src="/others/SIT Image.jpg" 
+          alt="Sri Sairam Institute of Technology" 
+          className="rounded-xl shadow-xl w-full max-w-md object-cover"
+        />
+      </div>
+
+      {/* Institution Text */}
+      <div className="text-white">
+        <p className="text-lg leading-relaxed font-avengero">
+          Sri Sai Ram Institute of Technology (SSIT), established in 2008 by MJF. Ln. Leo Muthu 
+          under Sapthagiri Educational Trust, is affiliated with Anna University and approved 
+          by AICTE. Located in West Tambaram, Chennai, it holds NAAC “A+” grade, ISO certifications, 
+          and 100% NBA accreditation. Offering 10 UG and 3 PG programs, including MBA, SSIT ranks 
+          in NIRF 201–300 (2024) and promotes excellence, innovation, strong placements, and 
+          holistic student growth.
+        </p>
+      </div>
+    </div>
+
+    {/* Row 2: Samarpana Text + Logo */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      {/* Samarpana Text */}
+      <div className="text-white">
+        <p className="text-lg leading-relaxed font-avengero">
+          Samarpana 2K25, organized by the NSS Unit of Sri Sairam Institute of Technology, 
+          is a national-level symposium celebrating innovation, service, and creativity. 
+          Scheduled for 23rd September 2025, in honor of NSS Day, this year’s theme is 
+          <span className="font-bold"> “Marvel”</span> – symbolizing the power of collective 
+          youth innovation. 
+        </p>
+        <p className="text-lg leading-relaxed mt-4 font-avengero">
+          The event offers a mix of technical and non-technical activities, including a 
+          Mini Hackathon, where students from across the country collaborate to build 
+          impactful solutions under time constraints. It is more than a competition – 
+          it is a platform for learning, innovation, and meaningful collaboration.
+        </p>
+      </div>
+
+      {/* Samarpana Logo */}
+      <div className="flex justify-center">
+        <img 
+          src="/others/Samarpana Logo.png" 
+          alt="Samarpana Logo" 
+          className="w-96 h-auto object-contain"
+        />
+      </div>
+    </div>
+
   </div>
-</div>
-          </div>
-        </div>
-      </Section>
+</Section>
+
+
+
 
       {/* Sponsors Section */}
       {/* <Section 
