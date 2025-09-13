@@ -5,9 +5,9 @@ const PamphletSlider: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const pamphlets = [
-    { id: 1, title: 'Event Poster 1', imageUrl: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg' },
-    { id: 2, title: 'Event Poster 2', imageUrl: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg' },
-    { id: 3, title: 'Event Poster 3', imageUrl: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg' },
+    { id: 1, title: 'Event Poster 1', src:'./poster.jpg' },
+    // { id: 2, title: 'Event Poster 2', imageUrl: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg' },
+    // { id: 3, title: 'Event Poster 3', imageUrl: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg' },
   ];
 
   const nextSlide = () => {
@@ -30,7 +30,7 @@ const PamphletSlider: React.FC = () => {
            <div className="relative h-[300px] md:h-[400px] lg:h-[500px]">
 
                 <img
-                  src={pamphlet.imageUrl}
+                  src={pamphlet.src}
                   alt={pamphlet.title}
                   className="w-full h-full object-cover rounded-2xl"
                 />

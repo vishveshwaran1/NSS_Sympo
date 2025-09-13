@@ -92,14 +92,21 @@ function App() {
       <Header />
       
       {/* Pamphlet Showcase Section */}
-      <Section 
+     <Section 
   title={<span className="font-avengero text-6xl">Event Gallery</span>} 
   subtitle={<span className="font-avengero text-3xl">Explore our exciting event</span>} 
   backgroundColor="bg-black bg-opacity-60"
 >
+  <div className="flex justify-center">
+    <img 
+      src="./poster.jpg" 
+      alt="Event Poster" 
+      className="w-3/4 md:w-2/3 lg:w-1/2 rounded-xl shadow-lg"
+    />
+  </div>
 
-        <PamphletSlider />
-      </Section>
+  {/* <PamphletSlider /> */}
+</Section>
 
       {/* Chief Guests Section */}
       <Section 
@@ -363,9 +370,9 @@ function App() {
     </div>
 
     {/* Text */}
-    <p className="text-gray-600 font-avengero">
+    {/* <p className="text-gray-600 font-avengero">
       Architecting digital experiences and ensuring seamless web performance for SAMARPANA.
-    </p>
+    </p> */}
   </div>
 </Section>
 
