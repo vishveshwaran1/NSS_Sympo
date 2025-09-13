@@ -1,6 +1,13 @@
 import React from "react";
 
-const technicalEvents = [
+interface Event {
+  name: string;
+  description: string;
+  link: string;
+  img: string;
+}
+
+const technicalEvents: Event[] = [
   {
     name: "Algo Galaxy",
     description:
@@ -27,11 +34,11 @@ const technicalEvents = [
     description:
       "A 2-hour UI/UX design competition in Figma where teams of two craft app/web prototypes based on a theme. Tests creativity, problem-solving, and design thinking.",
     link: "https://forms.gle/LsNnveJ4PqKpBjXE8",
-    img: "public/Events/Infinity Designs.png"
+    img: "/Events/Infinity Designs.png"
   }
 ];
 
-const nonTechnicalEvents = [
+const nonTechnicalEvents: Event[] = [
   {
     name: "The Sonic Dimension",
     description:
@@ -62,7 +69,7 @@ const nonTechnicalEvents = [
   }
 ];
 
-function EventCard({ event }: { event: typeof technicalEvents[0] }) {
+function EventCard({ event }: { event: Event }) {
   return (
     <div className="flex flex-col rounded-3xl shadow-xl bg-black bg-opacity-70 overflow-hidden h-[420px]">
       <div className="flex-shrink-0 h-[40%] w-full">
@@ -93,7 +100,7 @@ function EventCard({ event }: { event: typeof technicalEvents[0] }) {
   );
 }
 
-export default function EventList() {
+const EventList: React.FC = () => {
   return (
     <div className="space-y-12">
       {/* Technical Events Row */}
@@ -116,4 +123,6 @@ export default function EventList() {
       </div>
     </div>
   );
-}
+};
+
+export default EventList;

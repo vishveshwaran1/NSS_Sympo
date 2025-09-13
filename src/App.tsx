@@ -6,6 +6,7 @@ import PamphletSlider from './components/PamphletSlider';
 import StudentCoordinatorSlider from './components/StudentCoordinatorSlider';
 import StaffCoordinatorSlider from "./components/StaffCoordinatorSlider";
 import EventList from "./components/EventList";
+import TeamSlider from './components/TeamSlider';
 import { 
   Users, 
   Trophy, 
@@ -116,7 +117,7 @@ function App() {
         subtitle={<span className="font-avengero text-xl">Register for our technical and non-technical events!</span>}
         backgroundColor="bg-black bg-opacity-80"
       >
-        <EventList />
+        <EventList technicalEvents={technicalEvents} nonTechnicalEvents={nonTechnicalEvents} />
       </Section>
 
       {/* Mini Hackathon Section */}
@@ -158,49 +159,51 @@ function App() {
 
       {/* Paper Presentation Section */}
       <Section 
-        title="Paper Presentation" 
-        subtitle="Share your research and innovative ideas with the academic community"
-        backgroundColor="bg-black bg-opacity-60"
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <div className="bg-gradient-to-br from-red-600 to-red-800 rounded-2xl p-8 shadow-2xl">
-              <BookOpen className="w-16 h-16 text-white mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Research Symposium</h3>
-              <div className="space-y-3 text-white">
-                <p>• Present your innovative research findings</p>
-                <p>• Network with fellow researchers</p>
-                <p>• Get feedback from industry experts</p>
-                <p>• Win exciting cash prizes and certificates</p>
-              </div>
-              
-            </div>
-          </div>
-          <div className="text-white">
-            <h3 className="text-3xl font-bold mb-6">Call for Papers</h3>
-            <p className="text-lg leading-relaxed mb-6">
-              We invite researchers, students, and professionals to submit their original research 
-              papers across various domains including Computer Science, Engineering, and Technology. 
-              Selected papers will be presented at our symposium and published in our conference proceedings.
-            </p>
-            
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <Trophy className="w-6 h-6 text-yellow-400 mr-3" />
-                <span>Best Paper Awards</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-6 h-6 text-yellow-400 mr-3" />
-                <span>Publication Opportunity</span>
-              </div>
-              <div className="flex items-center">
-                <Users className="w-6 h-6 text-yellow-400 mr-3" />
-                <span>Expert Panel Review</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
+  title={<span className="font-avengero text-4xl text-white">Paper Presentation</span>} 
+  subtitle={<span className="font-avengero text-xl text-white">Showcase your research and social service innovations</span>}
+  backgroundColor="bg-black bg-opacity-60"
+>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div className="bg-gradient-to-br from-yellow-600 to-red-600 rounded-3xl shadow-2xl p-8 flex flex-col justify-between h-full">
+      <BookOpen className="w-16 h-16 text-white mb-6 mx-auto" />
+      <h3 className="text-2xl font-avengero text-white mb-4 text-center">Contribute to Social Service Literature</h3>
+      <ul className="text-white space-y-3 text-lg font-avengero mb-6">
+        <li>• Teams of up to 3 members</li>
+        <li>• Focus on NSS, NCC, YRC, or similar organizations</li>
+        <li>• Submit a research or project paper (precedence/abstract)</li>
+        <li>• Address real-world problems, solutions, or community impact</li>
+        <li>• Upload abstract in prescribed format via Google Form</li>
+        <li>• Accepted abstracts published in ISBN booklet</li>
+        <li>• Gain recognition for your social welfare contributions</li>
+      </ul>
+      <div className="flex flex-col items-center">
+        <span className="bg-white text-red-600 font-bold px-6 py-2 rounded-full mb-4">Registration Fee: ₹300</span>
+        <a
+          href="https://forms.gle/QMhKvSq5uq6LGx3k7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yellow-500 text-black font-bold px-6 py-2 rounded-full hover:bg-yellow-400 transition"
+        >
+          Register & Upload Abstract
+        </a>
+      </div>
+    </div>
+    <div className="flex flex-col justify-center text-white font-avengero text-lg">
+      <p className="mb-6">
+        We invite teams of up to 3 members to participate in an exciting opportunity to contribute to the domain of social service initiatives such as NSS, NCC, YRC, and similar organizations. Participants are encouraged to create a research paper or project paper that highlights innovative ideas, impactful case studies, or thoughtful analyses related to social service activities.
+      </p>
+      <p className="mb-6">
+        Each team must prepare and submit a precedence (abstract) in the prescribed paper publishing format, focusing on real-world problems, solutions, community impact, or social innovations. The abstract must be uploaded via the provided Google Form within the deadline.
+      </p>
+      <p className="mb-6">
+        All accepted abstracts will be compiled into a well-structured booklet, which will be published with an ISBN number, providing a valuable addition to academic and social service literature.
+      </p>
+      <p>
+        This is a great opportunity to showcase your contribution toward social welfare, promote your ideas on a larger platform, and gain recognition for your efforts in community development.
+      </p>
+    </div>
+  </div>
+</Section>
 
       {/* About Us Section */}
       <Section 
@@ -237,7 +240,7 @@ function App() {
       </Section>
 
       {/* Sponsors Section */}
-      <Section 
+      {/* <Section 
         title="Our Sponsors" 
         subtitle="Proud partners supporting our vision and mission"
         backgroundColor="bg-black bg-opacity-60"
@@ -251,7 +254,7 @@ function App() {
             </div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
       {/* Staff Coordinators Section */}
       <Section
@@ -259,7 +262,11 @@ function App() {
         subtitle="Meet our dedicated staff coordinators"
         backgroundColor="bg-black bg-opacity-50"
       >
-        <StaffCoordinatorSlider />
+        <TeamSlider members={[
+    { name: "Dr.Baranidharan K", position: "NSS Program Coordinator", src: "/Staff/Barani.jpg" },
+    { name: "Dr.Avudaniyaki R", position: "AP / S&H", src: "/Staff/Avudainayaki.jpg" },
+    { name: "Dr.Roopa D", position: "AP / CSE", src: "/Staff/roopa.jpg" }
+  ]} slidesToShow={3} />
       </Section>
 
       {/* Student Coordinators Section */}
@@ -268,7 +275,21 @@ function App() {
         subtitle="Meet our dedicated student coordinators"
         backgroundColor="bg-black bg-opacity-50"
       >
-        <StudentCoordinatorSlider />
+        <TeamSlider members={[
+    { name: "Abhishek", position: "Student Coordinator", src: "/MagicMem/Abhishek.jpg" },
+    { name: "Aiysha Nizar", position: "Student Coordinator", src: "/MagicMem/Aiysha Nizar.jpg" },
+    { name: "Akash", position: "Student Coordinator", src: "/MagicMem/Akash.jpg" },
+    { name: "Kishore", position: "Student Coordinator", src: "/MagicMem/Kishore.jpg" },
+    { name: "Murugayesu", position: "Student Coordinator", src: "/MagicMem/Murugayesu.jpg" },
+    { name: "Nivetha", position: "Student Coordinator", src: "/MagicMem/Nivetha.jpg" },
+    { name: "Prabha", position: "Student Coordinator", src: "/MagicMem/Prabha.jpg" },
+    { name: "Rishi Prasad", position: "Student Coordinator", src: "/MagicMem/Rishi Prasad.jpg" },
+    { name: "Roshini", position: "Student Coordinator", src: "/MagicMem/Roshini.jpg" },
+    { name: "Sathish", position: "Student Coordinator", src: "/MagicMem/Sathish.jpg" },
+    { name: "Srimathi", position: "Student Coordinator", src: "/MagicMem/Srimathi.jpg" },
+    { name: "Srivarshan", position: "Student Coordinator", src: "/MagicMem/Srivarshan.jpg" },
+    { name: "Venuprasath", position: "Student Coordinator", src: "/MagicMem/Venuprasath.jpg" }
+  ]} slidesToShow={5} />
       </Section>
 
       {/* Editors & Cinematographers Section */}
@@ -277,22 +298,7 @@ function App() {
         subtitle="Creative minds capturing every moment of our event"
         backgroundColor="bg-black bg-opacity-60"
       >
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {editors.map((editor, index) => (
-            <div key={index} className="text-center">
-              <div className="relative mx-auto mb-4">
-                <TeamCard
-                  src={editor.src}
-                  alt={editor.name}
-                  className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                  name={editor.name}
-                  position={editor.position}
-                  isCircular={false}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+        <TeamSlider members={editors} slidesToShow={4} />
       </Section>
 
       {/* Design Team Section */}
@@ -301,23 +307,7 @@ function App() {
         subtitle="Artistic visionaries behind our event's stunning visual identity"
         backgroundColor="bg-black bg-opacity-50"
       >
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          {designers.map((designer, index) => (
-            <div key={index} className="text-center">
-              <div className="relative mx-auto mb-4">
-                <TeamCard
-                src={designer.src}
-                  alt={designer.name}
-                  className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                  name={designer.name}
-                  position={designer.position}
-                  isCircular={false}
-                />
-               
-              </div>
-            </div>
-          ))}
-        </div>
+        <TeamSlider members={designers} slidesToShow={5} />
       </Section>
 
       {/* Web Master Section */}
@@ -378,7 +368,7 @@ function App() {
                 </div>
                 <div>
                   <h4 className="font-bold">Email</h4>
-                  <p className="text-yellow-300">samarpana@sairam.edu.in</p>
+                  <p className="text-yellow-300">samarpana2k25@gmail.com</p>
                 </div>
               </div>
               
