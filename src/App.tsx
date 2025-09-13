@@ -132,30 +132,43 @@ function App() {
 
       {/* Mini Hackathon Section */}
       <Section 
-        title={<span className="font-dback">Mini Hackathon</span>} 
-        backgroundColor="bg-yellow-600 bg-opacity-80"
-      >
-        <div className="bg-black bg-opacity-40 rounded-3xl p-12 text-center border-4 border-yellow-400">
-          <Code className="w-20 h-20 text-yellow-400 mx-auto mb-6" />
-          <h3 className="font-avengero text-3xl font-bold mb-6">4-Hour Coding Marathon</h3>
-          <p className="text-white text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-            Join our intensive 4-hour hackathon where teams of developers, designers, and innovators
-            come together to build amazing solutions. Code, create, and compete for exciting prizes
-            while learning from industry experts and mentors.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold">
-              ₹5000 Prize Pool
-            </div>
-            <div className="bg-white text-black px-6 py-3 rounded-full font-bold">
-              4 Hours Challenge
-            </div>
-            <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold">
-              Team of 4 Max
-            </div>
-          </div>
-        </div>
-      </Section>
+  title={<span className="font-dback">Mini Hackathon</span>} 
+  backgroundColor="bg-yellow-600 bg-opacity-80"
+>
+  <div className="bg-black bg-opacity-40 rounded-3xl p-12 text-center border-4 border-yellow-400">
+    <Code className="w-20 h-20 text-yellow-400 mx-auto mb-6" />
+    <h3 className="font-avengero text-3xl font-bold mb-6">4-Hour Coding Marathon</h3>
+    <p className="text-white text-lg leading-relaxed max-w-3xl mx-auto mb-8">
+      Join our intensive 4-hour hackathon where teams of developers, designers, and innovators
+      come together to build amazing solutions. Code, create, and compete for exciting prizes
+      while learning from industry experts and mentors.
+    </p>
+
+    {/* Info badges */}
+    <div className="flex flex-wrap justify-center gap-4 mb-8">
+      {/* <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold">
+        ₹5000 Prize Pool
+      </div> */}
+      <div className="bg-white text-black px-6 py-3 rounded-full font-bold">
+        4 Hours Challenge
+      </div>
+      <div className="bg-red-600 text-white px-6 py-3 rounded-full font-bold">
+        Team of 4 Max
+      </div>
+    </div>
+
+    {/* Register Button */}
+    <a
+      href="https://forms.gle/JZLhiZ8aytQnoYjS8"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105"
+    >
+      Register Now
+    </a>
+  </div>
+</Section>
+
 
       {/* Deadpool Sticker - Mobile Responsive & Higher Position */}
       <div className="relative">
