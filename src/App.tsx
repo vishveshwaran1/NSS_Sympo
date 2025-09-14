@@ -320,9 +320,9 @@ function App() {
         backgroundColor="bg-black bg-opacity-50"
       >
         <TeamSlider members={[
-    { name: "Dr.Baranidharan K", position: "NSS Program Coordinator", src: "/Staff/Barani.jpg" },
-    { name: "Dr.Avudaniyaki R", position: "AP / S&H", src: "/Staff/Avudainayaki.jpg" },
-    { name: "Dr.Roopa D", position: "AP / CSE", src: "/Staff/roopa.jpg" }
+    { name: "Dr.Baranidharan K", position: "NSS Programme Officer-Unit I  \nSamarpana Coordinator", src: "/Staff/Barani.jpg" },
+    { name: "Dr.Avudaniyaki R", position: "NSS Programme Officer-Unit II", src: "/Staff/Avudainayaki.jpg" },
+    { name: "Dr.Roopa D", position: "NSS Programme Officer-Unit III", src: "/Staff/roopa.jpg" }
   ]} slidesToShow={3} />
       </Section>
 

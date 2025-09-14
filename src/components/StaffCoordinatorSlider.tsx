@@ -1,9 +1,9 @@
 import React from "react";
 
 const staffCoordinators = [
-  { name: "Dr. Roopa D ", img: "/Staff/roopa.jpg" , designation: "AP / CSE"},
-  { name: "Dr. Baranidharan K", img: "/Staff/Barani.jpg" , designation: "AP / NSS Programme Officer"},
-  { name: "Dr. Avudainayaki R", img: "/Staff/Avudainayaki.jpg" , designation: "AP / S&H"}
+  { name: "Dr. Roopa D ", img: "/Staff/roopa.jpg" , designation: "NSS Programme Officer-Unit I \n Samarpana Coordinator"},
+  { name: "Dr. Baranidharan K", img: "/Staff/Barani.jpg" , designation: "NSS Programme Officer-Unit II"},
+  { name: "Dr. Avudainayaki R", img: "/Staff/Avudainayaki.jpg" , designation: "NSS Programme Officer-Unit III"}
 ];
 
 export default function StaffCoordinatorSlider() {
