@@ -25,7 +25,7 @@ const technicalEvents: Event[] = [
   {
     name: "Guardians of the Code",
     description:
-      "A fun, Marvel-themed workshop introducing beginners to JavaScript. Participants learn core concepts, DOM manipulation, and build a mini project—unlocking their own coding superpowers.",
+      "Guardian of the Code is a hands-on workshop on Generative AI . Learn to automate tasks, create code, and solve problems faster.",
     link: "https://forms.gle/62TVpJn5ybCMQFCg9",
     img: "/Events/Guardians of the Code.jpg"
   },
